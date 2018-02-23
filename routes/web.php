@@ -22,7 +22,6 @@ $router->get('/', function () use ($router) {
 //$router->get('/edit/recipe/{id}', function () use ($router) {
 //    return view('edit-recipe');
 //});
-
 $router->post('/login', 'LoginController@index');
 $router->post('/register', 'UserController@register');
 $router->get('/user/{id}', ['middleware' => 'auth', 'uses' =>  'UserController@get_user']);
